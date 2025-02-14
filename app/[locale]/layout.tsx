@@ -7,21 +7,20 @@ import "styles/tailwind.css"
 
 export default async function LocaleLayout({
                                                children,
-                                               params
+
                                            }: {
     children: React.ReactNode;
-    params: {locale: string};
 }) {
-    if (!routing.locales.includes(params.locale)) {
-        notFound();
-    }
+    // if (!routing.locales.includes(params.locale)) {
+    //     notFound();
+    // }
 
     // Providing all messages to the client
     // side is the easiest way to get started
     const messages = await getMessages();
 
     return (
-        <html lang={params.locale}>
+        <html>
         <body>
         <NextIntlClientProvider messages={messages}>
             {children}
