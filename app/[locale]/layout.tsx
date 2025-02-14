@@ -4,15 +4,15 @@ import {notFound} from 'next/navigation';
 import {routing} from "../../i18n/routing";
 import "styles/tailwind.css"
 
+
 export default async function LocaleLayout({
                                                children,
-                                               params: {locale}
+                                               params
                                            }: {
     children: React.ReactNode;
     params: {locale: string};
 }) {
-    // Ensure that the incoming `locale` is valid
-    if (!routing.locales.includes(locale)) {
+    if (!routing.locales.includes(params.locale)) {
         notFound();
     }
 
@@ -21,7 +21,7 @@ export default async function LocaleLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={locale}>
+        <html lang={params.locale}>
         <body>
         <NextIntlClientProvider messages={messages}>
             {children}
