@@ -21,7 +21,7 @@ const ProductDetails: React.FC = () => {
 
     const id = searchParams.get('id')
 
-    function fetchAndSetFiles(fileId: string[] |undefined | string, setFileList: (files: any[]) => void) {
+    function fetchAndSetFiles(fileId: string[] |undefined | string, setFileList: (files: FileInfo[]) => void) {
         if (fileId) {
             IntroduceService.getFiles(Array.isArray(fileId)?fileId:[fileId]).then((file)=>{
                 setFileList(file)

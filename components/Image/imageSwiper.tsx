@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import type {Swiper as SwiperClass} from "swiper/types";
 
 interface ImageProps{
     images:string[];
@@ -12,7 +13,7 @@ interface ImageProps{
 
 
 const ProductGallery: React.FC<ImageProps> = (props) => {
-    const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+    const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
     const {images} = props;
 
     return (
