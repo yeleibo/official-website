@@ -1,0 +1,24 @@
+{
+    "code": {
+        "productDetail": "Details",
+        "productBasicInfo": "Basic Product Information",
+        "productName": "Product Name",
+        "modelNumber": "Model Number",
+        "brand": "Brand",
+        "color": "Color",
+        "dimension": "Dimension",
+        "specification": "Specification",
+        "material": "Material",
+        "seriesName": "Series Name",
+        "secondarySeriesName": "Secondary Series Name",
+        "weight": "Weight",
+        "waterproofGrade": "Waterproof Grade",
+        "maxServiceLife": "Maximum Service Life",
+        "remark": "Remarks",
+        "productDocumentationLinks": "Product Documentation Links",
+        "productIntroduceVideo": "Product Introduction Video",
+        "productSolveVideo": "Product Solution Video",
+        "productConstructionVideo": "Product Construction Video",
+        "notFound":"No relevant product information found for this language"
+    }
+}

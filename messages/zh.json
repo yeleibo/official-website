@@ -1,0 +1,25 @@
+{
+    "code": {
+        "productDetail": "产品详情",
+        "productBasicInfo": "产品基本信息",
+        "productName": "产品名称",
+        "modelNumber": "型号编码",
+        "brand": "品牌",
+        "color": "颜色",
+        "dimension": "尺寸",
+        "specification": "规格",
+        "material": "材质",
+        "seriesName": "系列名称",
+        "secondarySeriesName": "系列副名称",
+        "weight": "重量",
+        "waterproofGrade": "防水等级",
+        "maxServiceLife": "最大使用年限",
+        "remark": "备注",
+        "productDocumentationLinks": "产品文档链接",
+        "productIntroduceVideo": "产品介绍视频",
+        "productSolveVideo": "产品解决视频",
+        "productConstructionVideo": "产品安装视频",
+        "notFound": "未找到该语言的相关产品信息"
+    }
+
+}

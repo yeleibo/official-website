@@ -1,9 +1,12 @@
 import withBundleAnalyzer from "@next/bundle-analyzer"
-import { type NextConfig } from "next"
-
+import createNextIntlPlugin from "next-intl/plugin";
 import { env } from "./env.mjs"
 
-const config: NextConfig = {
+const  withPlugins  =  require ( 'next-compose-plugins' )
+const withNextIntl = createNextIntlPlugin();
+
+const config = withPlugins([ [withBundleAnalyzer({ enabled: env.ANALYZE })],[withNextIntl]], {
+  output: "standalone",
   reactStrictMode: true,
   logging: {
     fetches: {
@@ -16,6 +19,6 @@ const config: NextConfig = {
     { source: "/health", destination: "/api/health" },
     { source: "/ping", destination: "/api/health" },
   ],
-}
+})
 
-export default env.ANALYZE ? withBundleAnalyzer({ enabled: env.ANALYZE })(config) : config
+export default config
