@@ -1,11 +1,11 @@
 name: 生成的Playwright测试报告文件
 on:
-  push:
-    branches:
-      - main
-      - master
-      - develop
-  pull_request: null
+#  push:
+#    branches:
+#      - main
+#      - master
+#      - develop
+#  pull_request: null
   workflow_dispatch: null
 jobs:
   test:
