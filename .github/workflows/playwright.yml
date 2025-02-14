@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: 生成的Playwright测试报告文件
 on:
   push:
     branches:

@@ -1,4 +1,4 @@
-name: Check
+name: 代码质量检查&&单元和集成测试
 
 on:
   push:
