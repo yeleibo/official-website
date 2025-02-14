@@ -4,8 +4,8 @@ import { BoxModalData, FileInfo } from "./type"
 import IntroduceService from "./service"
 import { useSearchParams } from "next/navigation"
 import ProductGallery from "../../../components/Image/imageSwiper"
+import {useLocale, useTranslations} from "next-intl"
 import LocaleSwitcherSelect from "../../../components/LocaleSwitcherSelect"
-import {useLocale, useTranslations} from "next-intl";
 
 
 const ProductDetails: React.FC = () => {

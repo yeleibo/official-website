@@ -13,12 +13,14 @@ const config = withPlugins([ [withBundleAnalyzer({ enabled: env.ANALYZE })],[wit
       fullUrl: true,
     },
   },
-  rewrites: async () => [
-    { source: "/healthz", destination: "/api/health" },
-    { source: "/api/healthz", destination: "/api/health" },
-    { source: "/health", destination: "/api/health" },
-    { source: "/ping", destination: "/api/health" },
-  ],
+  rewrites: async () => {
+    return [
+      {
+        source: "/api/:path*",
+        destination: "http://1.116.107.92:9000/api/:path*",
+      },
+    ];
+  },
 })
 
 export default config

@@ -4,7 +4,7 @@ import {BoxModalData, FileInfo} from "./type"
 const IntroduceService = {
   getIntroduce: async (id: string,locale:string): Promise<BoxModalData | null> => {
     try {
-      const res = await axios.get("http://1.116.107.92:9000/api/resource/boxModel/getBoxDetail", {
+      const res = await axios.get("/api/resource/boxModel/getBoxDetail", {
         headers: {
           "Content-Type": "application/json",
         },
@@ -30,7 +30,7 @@ const IntroduceService = {
     const params = new URLSearchParams();
     fileIds.forEach(id => params.append('fileIds', id));
     try {
-      const res = await axios.get("http://1.116.107.92:9000/api/file/batchPreview", {
+      const res = await axios.get("/api/file/batchPreview", {
         headers: {
           "Content-Type": "application/json",
         },
