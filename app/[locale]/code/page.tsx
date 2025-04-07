@@ -51,7 +51,7 @@ const ProductDetails: React.FC = () => {
     useEffect(() => {
 
 
-        IntroduceService.getIntroduce(id??'',local==='zh'?'zh-CN':'en-US').then(
+        IntroduceService.getIntroduce(id??'1893895451669753857',local==='zh'?'zh-CN':'en-US').then(
             (data) => {
                 if(data!==null){
                     setProductData(data);
@@ -72,9 +72,24 @@ const ProductDetails: React.FC = () => {
 
 
     if (data===undefined) return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Loading...</div>
-    if (data===null)return <div className="flex items-center justify-center min-h-screen bg-gray-100 py-4 relative">
-        <div className="text-left ml-10">{t('notFound')}</div>
-        <div className="absolute mt-28 ml-32"><LocaleSwitcherSelect/></div>
+    if (data===null)return <div className="relative w-full h-screen bg-white">
+        {/* 右上角语言切换 */}
+        <div className="absolute top-8 right-4 z-10">
+            <LocaleSwitcherSelect />
+        </div>
+
+        {/* 居中图片 */}
+        {/* 居中内容 */}
+        <div className="flex flex-col items-center justify-center w-full h-full px-4">
+            <img
+                src="/images/no_data.png"
+                alt={local === 'zh' ? '没有这个产品的相关信息' : 'No relevant information for this product'}
+                className="max-w-xs md:max-w-md object-contain"
+            />
+            <p className="mt-4 text-gray-500 text-sm text-center">
+                {local === 'zh' ? '没有这个产品的相关信息' : 'No relevant information for this product'}
+            </p>
+        </div>
     </div>
 
 
